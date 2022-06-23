@@ -36,8 +36,8 @@
     <PackageReference Include="Microsoft.IdentityModel.Clients.ActiveDirectory" Version="5.2.8.0" Culture="neutral" PublicKeyToken="31bf3856ad364e35" processorArchitecture="MSIL">
       <HintPath>packages\Microsoft.IdentityModel.Clients.ActiveDirectory.5.2.8\lib\net45\Microsoft.IdentityModel.Clients.ActiveDirectory.dll</HintPath>
     </PackageReference>
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" Culture="neutral" PublicKeyToken="30ad4fe6b2a6aeed" processorArchitecture="MSIL">
-      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" Culture="neutral" PublicKeyToken="30ad4fe6b2a6aeed" processorArchitecture="MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
     </PackageReference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
