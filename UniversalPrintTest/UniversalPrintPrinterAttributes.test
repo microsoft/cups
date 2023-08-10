@@ -63,6 +63,10 @@ DEFINE IPP_URI_SCHEME "/^ipps?://.+$$/"
         EXPECT media-col-database/media-type OF-TYPE keyword|name DEFINE-MATCH MEDIA_COL_DATABASE_HAS_MEDIA_TYPE
 	EXPECT media-type-supported OF-TYPE keyword|name IN-GROUP printer-attributes-tag IF-NOT-DEFINED MEDIA_COL_DATABASE_HAS_MEDIA_TYPE
 
+        EXPECT media-type-supported OF-TYPE keyword|name IN-GROUP printer-attributes-tag DEFINE-MATCH MEDIA_TYPE_SUPPORTED_PRESENT
+	EXPECT media-col-default/media-type DEFINE-MATCH MEDIA_TYPE_PRESENT_IN_MEDIA_COL_DEFAULT
+	EXPECT media-col-default/media-type WITH-VALUE-FROM media-type-supported IF-DEFINED MEDIA_TYPE_SUPPORTED_PRESENT IF-DEFINED MEDIA_TYPE_PRESENT_IN_MEDIA_COL_DEFAULT
+	
 	EXPECT ?number-up-default OF-TYPE integer IN-GROUP printer-attributes-tag COUNT 1 WITH-VALUE >0
 	EXPECT ?number-up-supported OF-TYPE integer|rangeOfInteger IN-GROUP printer-attributes-tag WITH-VALUE >0
 
