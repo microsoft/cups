@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2.8.0
     - name: install prerequisites
       run: sudo apt-get install -y avahi-daemon libavahi-client-dev libgnutls28-dev libpam-dev libusb-1.0-0-dev zlib1g-dev
     - name: configure
@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2.8.0
     - name: setup multiarch for i386
       run: sudo dpkg --add-architecture i386
     - name: update build environment
@@ -51,7 +51,7 @@ jobs:
     runs-on: macos-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@0717577d45739eb3c851188b29f50ed6c0b2194e # v2.8.0
     - name: configure
       run: ./configure --enable-debug --enable-maintainer --enable-sanitizer
     - name: make
